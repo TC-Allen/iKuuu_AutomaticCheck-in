@@ -2,7 +2,7 @@ name: "ikuuu automatic check"
 
 on:
   schedule:
-    - cron: "10 0 * * *"
+    - cron: "13 17 * * *"
 
 jobs:
   run-start:
