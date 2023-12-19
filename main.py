@@ -9,9 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 email = os.environ.get("EMAIL")
 password = os.environ.get("PASSWORD")
 
-options = webdriver.ChromeOptions()
-options.add_experimental_option('detach', True)
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome()
 
 driver.get('https://ikuuu.me/user')
 driver.find_element(By.ID, 'email').send_keys(email)
