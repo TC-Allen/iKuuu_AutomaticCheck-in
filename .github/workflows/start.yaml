@@ -2,7 +2,7 @@ name: "ikuuu automatic check"
 
 on:
   schedule:
-    - cron: "10 0 * * *"
+    - cron: "8 0 * * *"
 
 jobs:
   run-start:
@@ -21,8 +21,5 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run start
-        env:
-          EMAIL: ${{ secrets.EMAIL }}
-          PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           python main.py
