@@ -9,7 +9,10 @@ from selenium.webdriver.support import expected_conditions as EC
 email = os.environ.get("EMAIL")
 password = os.environ.get("PASSWORD")
 
-driver = webdriver.Chrome()
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+driver = webdriver.Chrome(options=options)
 
 driver.get('https://ikuuu.me/user')
 driver.find_element(By.ID, 'email').send_keys(email)
